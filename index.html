@@ -1,0 +1,78 @@
+<!DOCTYPE HTML>
+<html>
+  <head>
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name = "viewport" content = "width = 320,
+       initial-scale = 1, user-scalable = no">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+    <title>Magic Text!</title>
+    <style>
+
+      body {
+        background: #000;
+        margin: 0;
+        padding: 0;
+      }
+
+      * {
+        height: 480px;
+        width: 320px;
+      }
+
+      div {
+        position: absolute;
+      }
+
+      .sliver {
+        /*left: 154px;*/
+        overflow: hidden;
+        width: 16px;
+      }
+
+      div.text {
+        font-family: monospace;
+        color: #fff;
+        font-size: 500px;
+        font-weight: normal;
+        line-height: 360px;
+        width: 3em;
+        -webkit-animation-name: slide;
+        -webkit-animation-duration: 15s;
+        -webkit-animation-direction: alternate;
+        -webkit-animation-timing-function: linear;
+      }
+
+      @-webkit-keyframes slide {
+        0% {
+          -webkit-transform: translate(0, 0)
+        }
+        10% {
+          -webkit-transform: translate(0, 0)
+        }
+        100% {
+          -webkit-transform: translate(-1200px, 0)
+        }
+      }
+      /*
+      @-webkit-keyframes slideLeft {
+        0% {
+          left: 0
+        }
+        10% {
+          left: 0
+        }
+        100% {
+          left: -1500px;
+        }
+      }
+      */
+
+    </style>
+  </head>
+  <body onload="window.scrollTo(0,1)" style="display:none">
+    <div class="sliver">
+      <div class="text">MPG</div>
+    </div>
+    <script src="magic.js"></script>
+  </body>
+</html>
